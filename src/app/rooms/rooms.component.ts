@@ -4,7 +4,7 @@ import { Http } from '@angular/http';
 // import 'rxjs/add/operator/map';
 
 import { map } from "rxjs/operators";
-
+//here addig ssomething important
 @Component({
   selector: 'app-rooms',
   templateUrl: './rooms.component.html',
