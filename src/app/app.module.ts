@@ -14,6 +14,8 @@ import { FooterComponent } from './navigation/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { GridComponent } from './navigation/grid/grid.component';
 import { TourComponent } from './navigation/tour/tour.component';
+import {HttpClientModule} from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,9 @@ import { TourComponent } from './navigation/tour/tour.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule,
+    HttpModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

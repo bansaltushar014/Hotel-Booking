@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Http } from '@angular/http';
+// import 'rxjs/add/operator/map';
+
+import { map } from "rxjs/operators";
+
 @Component({
   selector: 'app-rooms',
   templateUrl: './rooms.component.html',
@@ -7,9 +12,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: Http) { }
 
   ngOnInit() {
+    this.http.get("https://rugged-dry-tortugas-95899.herokuapp.com/products/5d1dcc542536fb3aeac1ecfb").
+    pipe(map((response) => response.json())).
+    subscribe((data) => 
+    console.log(data));
   }
 
 }
