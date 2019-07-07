@@ -1,3 +1,53 @@
 <p>
   rooms works!
 </p>
+
+<table>
+  <thead>
+  <th># Policy ID</th>
+  <th>Policy ocation</th>
+  <th>Policy link</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let policy of policies">
+  <td>{{policy.price}}</td>
+  <td>{{policy.location}}</td>
+  <td>{{policy.roompic}}</td>
+  </tr>
+  </tbody>
+  </table>
+  
+
+<div *ngFor="let policy of policies;  let i = index" [attr.data-index]="i">
+
+  <div class="row  text-center" style="" *ngIf="i % 3 === 0">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img class="img" src="{{policies[i].roompic}}" alt="Paris">
+        <p><strong>{{policies[i].location}}</strong></p>
+        <p>Price per daya = {{policies[i].price}}</p>
+        <button class="btn">Buy Tickets</button>
+      </div>
+    </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img class="img" src="{{policies[i+1].roompic}}" alt="New York">
+          <p><strong>{{policies[i+1].location}}</strong></p>
+          <p>Price per daya = {{policies[i+1].price}}</p>
+          <button class="btn">Buy Tickets</button>
+        </div>
+      </div>
+      
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img class="img" src="{{policies[i+2].roompic}}" alt="San Francisco">
+          <p><strong>{{policies[i+2].location}}</strong></p>
+          <p>Price per daya = {{policies[i+2].price}}</p>
+          <button class="btn">Buy Tickets</button>
+        </div>
+      </div>
+  </div>
+
+
+ </div>
+

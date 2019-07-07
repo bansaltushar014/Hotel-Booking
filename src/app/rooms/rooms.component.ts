@@ -14,11 +14,12 @@ export class RoomsComponent implements OnInit {
 
   constructor(private http: Http) { }
 
+  policies: [];
   ngOnInit() {
-    this.http.get("https://rugged-dry-tortugas-95899.herokuapp.com/products/5d1dcc542536fb3aeac1ecfb").
+    this.http.get("https://rugged-dry-tortugas-95899.herokuapp.com/products/getrooms").
     pipe(map((response) => response.json())).
     subscribe((data) => 
-    console.log(data));
+    {this.policies  = data});
   }
 
 }
