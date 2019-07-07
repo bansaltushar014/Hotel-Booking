@@ -1,22 +1,4 @@
-<p>
-  rooms works!
-</p>
 
-<table>
-  <thead>
-  <th># Policy ID</th>
-  <th>Policy ocation</th>
-  <th>Policy link</th>
-  </thead>
-  <tbody>
-  <tr *ngFor="let policy of policies">
-  <td>{{policy.price}}</td>
-  <td>{{policy.location}}</td>
-  <td>{{policy.roompic}}</td>
-  </tr>
-  </tbody>
-  </table>
-  
 
 <div *ngFor="let policy of policies;  let i = index" [attr.data-index]="i">
 
