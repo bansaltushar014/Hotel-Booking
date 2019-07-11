@@ -20,6 +20,10 @@ export class RoomsComponent implements OnInit {
     pipe(map((response) => response.json())).
     subscribe((data) => 
     {this.policies  = data});
+
+    
+  
+    
   }
 
 }
