@@ -16,6 +16,7 @@ import { GridComponent } from './navigation/grid/grid.component';
 import { TourComponent } from './navigation/tour/tour.component';
 import {HttpClientModule} from '@angular/common/http';
 import { HttpModule } from '@angular/http';
+import { FormsModule }   from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +37,7 @@ import { HttpModule } from '@angular/http';
     RouterModule,
     HttpClientModule,
     HttpModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
